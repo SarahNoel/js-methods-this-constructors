@@ -1,7 +1,7 @@
 var BookReader = require('../book_reader');
 
-var exampleBook = ['any', 'array', 'of', 'text', 'is', 'a', 'book', 'to', 'us'],
-    shortExampleBook = ['this', 'is', 'short'];;
+var exampleBook = ['any', 'array', 'of', 'text', 'is', 'a', 'book', 'to', 'us'];
+var shortExampleBook = ['this', 'is', 'short'];
 
 
 describe('properties', function() {
@@ -71,7 +71,7 @@ describe('#encouragement', function() {
   it('returns an extra special String of encouragement for the reader when they are on the last page', function() {
     var reader = new BookReader(shortExampleBook);
     reader.nextPage();
-
+    reader.nextPage();
     expect(reader.encouragement()).toEqual("Keep going, this book is good 'til the last drop!");
   });
 });
