@@ -1,12 +1,7 @@
-console.log("sup");
-
 function BookReader(book, currentPage) {
   this.book = book;
   this.currentPage = 0;
 }
-
-var book1 = new BookReader(['this', 'is', 'short']);
-console.log(book1);
 
 BookReader.prototype.nextPage = function() {
   this.currentPage++;
@@ -48,8 +43,6 @@ BookReader.prototype.encouragement = function() {
     return "Keep going, only "+ (this.book.length-1 - this.currentPage) + " pages left after this one!";
   }
 };
-
-
 
 // DO NOT MODIFY BELOW THIS COMMENT:
 module.exports = BookReader;

@@ -4,10 +4,6 @@ function Taxi(driverName, maxNumberOfPassengers) {
   this.passengers = [];
 }
 
-var cab = new Taxi("Matt Damon", 7);
-
-console.log(cab);
-
 Taxi.prototype.addPassenger = function(name){
   if(this.passengers.length < this.maxNumberOfPassengers){
     if (typeof name === 'string'){
@@ -19,10 +15,6 @@ Taxi.prototype.addPassenger = function(name){
   }
   return this.passengers;
 };
-
-console.log(cab.addPassenger("Ben Affleck"));
-
-console.log(cab);
 
 Taxi.prototype.passengerCount = function(){
   return this.passengers.length;
@@ -39,14 +31,6 @@ Taxi.prototype.full = function(){
 Taxi.prototype.dropOffPassengers = function() {
   this.passengers = [];
 };
-
-
-
-
-
-
-
-
 
 // DO NOT MODIFY BELOW THIS COMMENT:
 module.exports = Taxi;
